@@ -1,0 +1,244 @@
+:root {
+    --red: #fe2031;
+    --dark: #0d0d0c;
+    --gray: #111111;
+    --white: #ffffff;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.7), 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--dark);
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--red);
+}
+
+*::-webkit-scrollbar-thumb:active {
+    background: var(--red);
+}
+
+::selection {
+    background-color: var(--red);
+}
+
+html {
+    scroll-behavior: smooth;
+    height: 100%;
+    zoom: 75%
+}
+
+body {
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--dark);
+    color: var(--white);
+    height: 100%;
+}
+
+.panel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 120vh;
+    gap: 10px;
+}
+
+.panel {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    width: 650px;
+    text-align: center;
+    color: var(--white);
+    transform-style: preserve-3d;
+}
+
+.avatar {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--red);
+    margin-bottom: 15px;
+    box-shadow: 0 0 10px 4px var(--red);
+}
+
+.name {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--white);
+    margin-bottom: 6px;
+}
+
+.tag {
+    font-size: 20px;
+    font-weight: bold;
+    color: #bbb;
+}
+
+.bio {
+    font-size: 16px;
+    color: #f0f0f0;
+    margin-top: 12px;
+    line-height: 1.5;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+    font-weight: 500;
+}
+
+.interests {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.interests h3 {
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--white);
+    text-shadow: 0 0 8px var(--red);
+}
+
+.interest-items {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    justify-content: center;
+}
+
+.interest {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: 10px 18px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.interest:hover {
+    background-color: var(--red);
+    box-shadow: 0 0 12px var(--red);
+    color: var(--white);
+}
+
+.interest i {
+    font-size: 1.3rem;
+    color: var(--red);
+    transition: color 0.3s ease;
+}
+
+.interest:hover i {
+    color: var(--white);
+}
+
+.socials {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; 
+    font-size: 36px;
+}
+
+.social-link {
+    color: #999;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: scale(1.1);
+}
+
+.social-link.twitter:hover {
+    color: #1DA1F2;
+}
+.social-link.github:hover {
+    color: var(--white);
+}
+.social-link.tiktok:hover {
+    color: #000;
+}
+.social-link.spotify:hover {
+    color: #1DB954;
+}
+.social-link.telegram:hover {
+    color: #0088cc;
+}
+.social-link.aetherix:hover {
+    color: var(--red);
+}
+
+@media (max-width: 777px) {
+  .panel-container {
+    padding: 20px;
+    gap: 20px;
+  }
+
+  .panel {
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 10px;
+  }
+
+  .avatar {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+
+  .name {
+    font-size: 20px;
+  }
+
+  .tag {
+    font-size: 16px;
+  }
+
+  .bio {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .interest {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+  }
+
+  .interest i {
+    font-size: 1.1rem;
+  }
+
+  .socials {
+    gap: 20px;
+    font-size: 28px;
+    flex-wrap: wrap;
+  }
+
+  .spotify-panel {
+    padding: 10px 0;
+    height: 130px;
+  }
+
+  .spotify-panel iframe {
+    height: 120px;
+    width: 450px;
+  }
+}

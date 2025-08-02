@@ -1,0 +1,11 @@
+{
+    "builds": [
+      {
+        "src": "source/**/*",
+        "use": "@vercel/static"
+      }
+    ],
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/source/index.html" }
+    ]
+}
